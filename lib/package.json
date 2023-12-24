@@ -1,5 +1,5 @@
 {
-  "name": "@dex-ui/lib",
+  "name": "@orbs-network/dex-ui-kit",
   "version": "0.0.1",
   "main": "./index.js",
   "module": "./index.mjs",

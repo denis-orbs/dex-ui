@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dex-ui/lib": ["lib/src/index.ts"],
+      "@orbs-network/dex-ui-kit": ["lib/src/index.ts"],
       "@dex-ui/mylib": ["mylib/src/index.ts"],
       "@dex-ui/mylib12": ["dist/lib/mylib12/src/index.ts"],
       "@dex-ui/ui-lib": ["ui-lib/src/index.ts"],
