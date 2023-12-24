@@ -1,7 +1,7 @@
 {
-  "name": "quickswap",
+  "name": "dex",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/quickswap/src",
+  "sourceRoot": "apps/dex/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/quickswap"
+        "outputPath": "dist/apps/dex"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "quickswap:build"
+        "buildTarget": "dex:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "quickswap:build:development",
+          "buildTarget": "dex:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "quickswap:build:production",
+          "buildTarget": "dex:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "quickswap:build"
+        "buildTarget": "dex:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "quickswap:build:development"
+          "buildTarget": "dex:build:development"
         },
         "production": {
-          "buildTarget": "quickswap:build:production"
+          "buildTarget": "dex:build:production"
         }
       }
     },
@@ -56,7 +56,7 @@
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/apps/quickswap"
+        "reportsDirectory": "../../coverage/apps/dex"
       }
     },
     "lint": {

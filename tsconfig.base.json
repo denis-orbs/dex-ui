@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dex-ui/lib": ["lib/src/index.ts"],
+      "@dex-ui/mylib": ["mylib/src/index.ts"],
+      "@dex-ui/mylib12": ["dist/lib/mylib12/src/index.ts"],
+      "@dex-ui/ui-lib": ["ui-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
