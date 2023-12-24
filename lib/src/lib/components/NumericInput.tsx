@@ -2,7 +2,7 @@ import { NumericFormat } from 'react-number-format';
 import styled from 'styled-components';
 import { FlexRow } from './styles';
 
-export interface Props {
+export interface NumericInputProps {
   onChange?: (value: string) => void;
   value?: string | number;
   placeholder?: string;
@@ -31,7 +31,7 @@ export function NumericInput({
   maxValue,
   decimalScale,
   minAmount,
-}: Props) {
+}: NumericInputProps) {
   const inputValue = value || minAmount || '';
 
   return (
@@ -74,8 +74,7 @@ export function NumericInput({
   );
 }
 
-
-const StyledLoader = styled.div``
+const StyledLoader = styled.div``;
 
 const StyledContainer = styled.div({
   flex: 1,

@@ -14,6 +14,8 @@ interface Props {
   children: React.ReactNode;
 }
 
+
+
 const RainbowProvider = ({
   children,
   projectId,
@@ -35,6 +37,8 @@ const RainbowProvider = ({
       chains,
     });
 
+
+
     const wagmiConfig = createConfig({
       autoConnect: true,
       connectors,
@@ -49,11 +53,14 @@ const RainbowProvider = ({
 
   
 
-  
+
   return (
-    <>
-      {children}
-    </>
+    <WagmiConfig config={wagmiConfig}>
+      <RainbowKitProvider chains={chains}>
+        <ConnectButton />
+        {children}
+      </RainbowKitProvider>
+    </WagmiConfig>
   );
 };
 

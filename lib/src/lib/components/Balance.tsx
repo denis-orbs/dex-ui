@@ -1,17 +1,16 @@
-import styled from 'styled-components'
+import styled, { CSSProperties } from 'styled-components'
 
 interface Props{
     value?: string;
-    symbol?: string;
     className?: string;
+    css?: CSSProperties;
 }
 
 
-export function Balance({ value, symbol, className }: Props) {
+export function Balance({ value, className = '', css = {} }: Props) {
   return (
-    <Container className={className}>
-      {value}
-      {symbol}
+    <Container className={className} style={css}>
+      <p> {`Balance: ${value}`}</p>
     </Container>
   );
 }
@@ -19,5 +18,5 @@ export function Balance({ value, symbol, className }: Props) {
 
 
 const Container = styled.div`
-
+  font-size: 14px;
 `;

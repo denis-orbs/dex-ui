@@ -1,28 +1,19 @@
-import { RainbowProvider } from "@dex-ui/lib";
-
-export function App() {
-  return (
-    <>
-      <p>test</p>
-      <Quickswap />
-    </>
-  );
-}
+import { RainbowProvider } from '@dex-ui/lib';
 
 const appName = import.meta.env['VITE_APP_NAME'];
 const projectId = import.meta.env['VITE_RAINBOW_PROJECT_ID'];
 const infuraKey = import.meta.env['VITE_INFURA_KEY'];
 
-const Quickswap = () => {
+export function App() {
   return (
     <RainbowProvider
       projectId={projectId}
       infureKey={infuraKey}
       appName={appName}
     >
-     
+      <div></div>
     </RainbowProvider>
   );
-};
+}
 
 export default App;
